@@ -42,13 +42,13 @@ Things you may want to cover:
 ### Association
 - has_many :comments
 - has_many :group
-- has_many  :tags,  through:  :posts_tags
-
+- has_many :group, through: :users_group
 
 ### commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
+|image|text||
+|text|text||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association
@@ -59,8 +59,6 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: fales|
-
 ### Association
 - has_many :comments
 - has_many :user
-- has_many  :tags,  through:  :posts_tags
