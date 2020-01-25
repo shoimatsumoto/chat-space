@@ -41,8 +41,8 @@ Things you may want to cover:
 |password|string|null:false|
 ### Association
 - has_many :comments
-- has_many :group
-- has_many :group, through: :users_group
+- has_many :users_groups
+- has_many :groups, through: :users_groups
 
 ### commentsテーブル
 |Column|Type|Options|
@@ -58,7 +58,8 @@ Things you may want to cover:
 ### groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: fales|
+|name|string|null: false|
 ### Association
 - has_many :comments
 - has_many :user
+- has_many :users, through: :users_groups
